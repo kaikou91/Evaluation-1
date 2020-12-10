@@ -1,0 +1,130 @@
+                    body {
+                        /* background: rgb(204, 36, 116); */
+                        background: linear-gradient(0deg, rgba(204, 36, 116, 1) 0%, rgba(75, 79, 82, 1) 100%);
+                    }
+                    
+                    .corpDePage {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: 130px 500px 130px;
+                        grid-gap: 10px;
+                    }
+                    
+                    .navDePage {
+                        grid-column-start: 2;
+                        grid-column-end: 5;
+                        /* background-color: red; */
+                        color: wheat;
+                        padding: 1rm;
+                        border-bottom: 1px solid;
+                    }
+                    
+                    .contenuDePage {
+                        grid-column-start: 2;
+                        grid-column-end: 5;
+                        /* background-color: violet; */
+                    }
+                    
+                    .sideBarPage {
+                        grid-row: 1 / -1;
+                        /* background-color: blue; */
+                        border-right: 1px solid;
+                    }
+                    
+                    .footerDePage {
+                        /* background-color: green; */
+                        grid-column: 2 / span 3;
+                        border-top: 1px solid;
+                    }
+                    
+                    .footerDePage {
+                        text-align: center;
+                    }
+                    
+                    .flex {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        list-style: none;
+                    }
+                    
+                    .centerFooter {
+                        margin-top: 55px;
+                        padding-left: 50px;
+                        padding-right: 50px;
+                    }
+                    
+                    .itm {
+                        height: 120px;
+                        width: 120px;
+                        border: 1px solid;
+                    }
+                    
+                    .mecCards2 {
+                        margin-top: 20px;
+                    }
+                    
+                    .barDeRcherche {
+                        margin-top: 50px;
+                    }
+                    
+                    label {
+                        margin: 0 40px 0 0;
+                        font-size: 26px;
+                        line-height: 70px;
+                        display: none;
+                    }
+                    
+                    #toggle {
+                        display: none;
+                    }
+                    
+                    @media only screen and ( max-width: 1150px) {
+                        .corpDePage {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: 130px 100px 500px 130px;
+                            grid-gap: 10px;
+                        }
+                        .navDePage {
+                            grid-column-start: 1;
+                            grid-column-end: 5;
+                            color: gray;
+                            padding: 1rm;
+                            border-bottom: 1px solid;
+                        }
+                        .sideBarPage {
+                            grid-row-start: 2;
+                            grid-row-end: 3;
+                            grid-column-start: 1;
+                            grid-column-end: 5;
+                            border-right: 1px solid;
+                            /* display: none; */
+                        }
+                        .contenuDePage {
+                            grid-column-start: 1;
+                            grid-column-end: 5;
+                        }
+                        .footerDePage {
+                            /* background-color: green; */
+                            grid-column: 2 / span 3;
+                            border-top: 1px solid;
+                        }
+                    }
+                    
+                    @media only screen and (max-width: 500px) {
+                        label {
+                            display: block;
+                            cursor: pointer;
+                        }
+                        .maListeDartiste {
+                            display: none;
+                        }
+                        #toggle:checked+.maListeDartiste {
+                            /* display: block; */
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            list-style: none;
+                        }
+                    }
