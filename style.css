@@ -1,7 +1,9 @@
                     body {
-                        /* background: rgb(204, 36, 116); */
                         background: linear-gradient(0deg, rgba(204, 36, 116, 1) 0%, rgba(75, 79, 82, 1) 100%);
+                        height: 100%;
+                        width: 100%;
                     }
+                    /* apllication du grid  */
                     
                     .corpDePage {
                         display: grid;
@@ -36,6 +38,7 @@
                         grid-column: 2 / span 3;
                         border-top: 1px solid;
                     }
+                    /* FIN d'apllication du grid  */
                     
                     .footerDePage {
                         text-align: center;
@@ -47,11 +50,15 @@
                         align-items: center;
                         list-style: none;
                     }
-                    
-                    .centerFooter {
+                    /* .centerFooter {
                         margin-top: 55px;
                         padding-left: 50px;
                         padding-right: 50px;
+                    } */
+                    
+                    article {
+                        width: 350px;
+                        overflow: hidden;
                     }
                     
                     .itm {
@@ -60,24 +67,40 @@
                         border: 1px solid;
                     }
                     
-                    .mecCards2 {
+                    .mesCards2 {
                         margin-top: 20px;
                     }
                     
-                    .barDeRcherche {
+                    img {
+                        height: 120px;
+                        width: 120px;
+                    }
+                    
+                    .barDeRecherche {
                         margin-top: 50px;
                     }
                     
+                    .barDeRecherche input {
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        padding-left: 20px;
+                        width: 150px;
+                        height: 21px;
+                        border: 2px solid gray;
+                        border-radius: 20px;
+                    }
+                    
                     label {
-                        margin: 0 40px 0 0;
-                        font-size: 26px;
-                        line-height: 70px;
+                        margin: 10px 40px 0 10px;
+                        font-size: 25px;
+                        line-height: 1px;
                         display: none;
                     }
                     
                     #toggle {
                         display: none;
                     }
+                    /* media query-pour la page  */
                     
                     @media only screen and ( max-width: 1150px) {
                         .corpDePage {
@@ -98,16 +121,22 @@
                             grid-row-end: 3;
                             grid-column-start: 1;
                             grid-column-end: 5;
-                            border-right: 1px solid;
+                            border-bottom: 1px solid;
+                            border-right: none;
                             /* display: none; */
+                        }
+                        .maListeDartiste ul {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            list-style: none;
                         }
                         .contenuDePage {
                             grid-column-start: 1;
                             grid-column-end: 5;
                         }
                         .footerDePage {
-                            /* background-color: green; */
-                            grid-column: 2 / span 3;
+                            grid-column: 1 / span 5;
                             border-top: 1px solid;
                         }
                     }
@@ -121,10 +150,54 @@
                             display: none;
                         }
                         #toggle:checked+.maListeDartiste {
-                            /* display: block; */
-                            display: flex;
+                            display: block;
                             justify-content: space-around;
                             align-items: center;
                             list-style: none;
+                        }
+                    }
+                    /* grid-respensive-pour mobile */
+                    
+                    @media only screen and (max-width: 500px) {
+                        .corpDePage {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: 100px 30px 130px 130px;
+                            grid-gap: 10px;
+                        }
+                        .navDePage {
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                            color: wheat;
+                            padding: 1rm;
+                            border-bottom: 1px solid;
+                        }
+                        .sideBarPage {
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                            border-bottom: 1px solid;
+                        }
+                        .contenuDePage {
+                            grid-column-start: 1;
+                            grid-column-end: 3;
+                        }
+                        .footerDePage {
+                            grid-column: 1 / span 2;
+                            border-top: 1px solid;
+                        }
+                    }
+                    
+                    @media only screen and (max-width: 500px) {
+                        .mesCards1 {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .mesCards2 {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .article {
+                            display: flex;
+                            flex-direction: row;
                         }
                     }
