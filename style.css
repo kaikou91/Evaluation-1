@@ -1,203 +1,353 @@
-                    body {
-                        background: linear-gradient(0deg, rgba(204, 36, 116, 1) 0%, rgba(75, 79, 82, 1) 100%);
-                        height: 100%;
-                        width: 100%;
-                    }
-                    /* apllication du grid  */
-                    
-                    .corpDePage {
-                        display: grid;
-                        grid-template-columns: repeat(4, 1fr);
-                        grid-template-rows: 130px 500px 130px;
-                        grid-gap: 10px;
-                    }
-                    
-                    .navDePage {
-                        grid-column-start: 2;
-                        grid-column-end: 5;
-                        /* background-color: red; */
-                        color: wheat;
-                        padding: 1rm;
-                        border-bottom: 1px solid;
-                    }
-                    
-                    .contenuDePage {
-                        grid-column-start: 2;
-                        grid-column-end: 5;
-                        /* background-color: violet; */
-                    }
-                    
-                    .sideBarPage {
-                        grid-row: 1 / -1;
-                        /* background-color: blue; */
-                        border-right: 1px solid;
-                    }
-                    
-                    .footerDePage {
-                        /* background-color: green; */
-                        grid-column: 2 / span 3;
-                        border-top: 1px solid;
-                    }
-                    /* FIN d'apllication du grid  */
-                    
-                    .footerDePage {
-                        text-align: center;
-                    }
-                    
-                    .flex {
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        list-style: none;
-                    }
-                    /* .centerFooter {
-                        margin-top: 55px;
-                        padding-left: 50px;
-                        padding-right: 50px;
-                    } */
-                    
-                    article {
-                        width: 350px;
-                        overflow: hidden;
-                    }
-                    
-                    .itm {
-                        height: 120px;
-                        width: 120px;
-                        border: 1px solid;
-                    }
-                    
-                    .mesCards2 {
-                        margin-top: 20px;
-                    }
-                    
-                    img {
-                        height: 120px;
-                        width: 120px;
-                    }
-                    
-                    .barDeRecherche {
-                        margin-top: 50px;
-                    }
-                    
-                    .barDeRecherche input {
-                        padding-top: 5px;
-                        padding-bottom: 5px;
-                        padding-left: 20px;
-                        width: 150px;
-                        height: 21px;
-                        border: 2px solid gray;
-                        border-radius: 20px;
-                    }
-                    
-                    label {
-                        margin: 10px 40px 0 10px;
-                        font-size: 25px;
-                        line-height: 1px;
-                        display: none;
-                    }
-                    
-                    #toggle {
-                        display: none;
-                    }
-                    /* media query-pour la page  */
-                    
-                    @media only screen and ( max-width: 1150px) {
-                        .corpDePage {
-                            display: grid;
-                            grid-template-columns: repeat(4, 1fr);
-                            grid-template-rows: 130px 100px 500px 130px;
-                            grid-gap: 10px;
-                        }
-                        .navDePage {
-                            grid-column-start: 1;
-                            grid-column-end: 5;
-                            color: gray;
-                            padding: 1rm;
-                            border-bottom: 1px solid;
-                        }
-                        .sideBarPage {
-                            grid-row-start: 2;
-                            grid-row-end: 3;
-                            grid-column-start: 1;
-                            grid-column-end: 5;
-                            border-bottom: 1px solid;
-                            border-right: none;
-                            /* display: none; */
-                        }
-                        .maListeDartiste ul {
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: center;
-                            list-style: none;
-                        }
-                        .contenuDePage {
-                            grid-column-start: 1;
-                            grid-column-end: 5;
-                        }
-                        .footerDePage {
-                            grid-column: 1 / span 5;
-                            border-top: 1px solid;
-                        }
-                    }
-                    
-                    @media only screen and (max-width: 500px) {
-                        label {
-                            display: block;
-                            cursor: pointer;
-                        }
-                        .maListeDartiste {
-                            display: none;
-                        }
-                        #toggle:checked+.maListeDartiste {
-                            display: block;
-                            justify-content: space-around;
-                            align-items: center;
-                            list-style: none;
-                        }
-                    }
-                    /* grid-respensive-pour mobile */
-                    
-                    @media only screen and (max-width: 500px) {
-                        .corpDePage {
-                            display: grid;
-                            grid-template-columns: repeat(2, 1fr);
-                            grid-template-rows: 100px 30px 130px 130px;
-                            grid-gap: 10px;
-                        }
-                        .navDePage {
-                            grid-column-start: 1;
-                            grid-column-end: 3;
-                            color: wheat;
-                            padding: 1rm;
-                            border-bottom: 1px solid;
-                        }
-                        .sideBarPage {
-                            grid-column-start: 1;
-                            grid-column-end: 3;
-                            border-bottom: 1px solid;
-                        }
-                        .contenuDePage {
-                            grid-column-start: 1;
-                            grid-column-end: 3;
-                        }
-                        .footerDePage {
-                            grid-column: 1 / span 2;
-                            border-top: 1px solid;
-                        }
-                    }
-                    
-                    @media only screen and (max-width: 500px) {
-                        .mesCards1 {
-                            display: flex;
-                            flex-direction: column;
-                        }
-                        .mesCards2 {
-                            display: flex;
-                            flex-direction: column;
-                        }
-                        .article {
-                            display: flex;
-                            flex-direction: row;
-                        }
-                    }
+body {
+    background: linear-gradient(0deg, rgba(19, 23, 28, 1) 58%, rgba(10, 16, 22, 1) 89%, rgba(5, 17, 29, 1) 100%);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+/* apllication du grid  */
+
+.corpDePage {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 1fr);
+    grid-template-rows: 80px 600px 80px;
+    grid-gap: 5px;
+}
+
+.navDePage {
+    /* background-image: url(img/music.jpg);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat; */
+    grid-column-start: 2;
+    grid-column-end: 6;
+    padding: 1rm;
+    border-bottom: 1px solid gray;
+    border-radius: 10px
+}
+
+.contenuDePage {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    margin-top: 20px;
+}
+
+.sideBarPage {
+    grid-row: 1 / -1;
+    border-right: 1px solid gray;
+}
+
+.logoDePage {
+    text-align: center;
+}
+
+.navDePage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.navDePage img {
+    width: 50px;
+    height: 50px;
+}
+
+.maListeDartiste {
+    background: linear-gradient(0deg, rgba(5, 17, 29, 1) 0%, rgba(78, 92, 108, 1) 100%);
+}
+
+.maListeDartiste ul {
+    list-style: none;
+}
+
+.footerDePage {
+    grid-column: 2 / span 4;
+    border-top: 1px solid gray;
+    background-color: #000;
+}
+
+
+/* FIN d'apllication du grid  */
+
+h2 {
+    text-align: center;
+}
+
+.footerDePage {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.centerFooter {
+    margin-top: 55px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+article {
+    width: 350px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-right: 5px;
+}
+
+.itm {
+    height: 120px;
+    width: 120px;
+    border: 1px solid gray;
+}
+
+.mesCards2 {
+    margin-top: 20px;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+}
+
+.maListeDeReseau img {
+    height: 50px;
+    width: 50px;
+}
+
+.barDeRecherche {
+    margin-top: 50px;
+}
+
+.barDeRecherche input {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    width: 150px;
+    height: 21px;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+
+label {
+    margin: 10px 40px 0 10px;
+    font-size: 25px;
+    line-height: 1px;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+
+/* media query-pour la page  */
+
+@media only screen and ( max-width: 1150px) {
+    .corpDePage {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 80px 100px 600px 80px;
+        grid-gap: 10px;
+    }
+    .navDePage {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        color: gray;
+        padding: 1rm;
+        border-bottom: 1px solid;
+    }
+    .sideBarPage {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        border-bottom: 1px solid;
+        border-right: none;
+        /* display: none; */
+    }
+    .maListeDartiste ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+    .contenuDePage {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .footerDePage {
+        grid-column: 1 / span 5;
+        border-top: 1px solid;
+    }
+}
+
+
+/* media query poue max 800 */
+
+@media only screen and (max-width: 800px) {
+    .corpDePage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 80px 100px 800px 80px;
+        grid-gap: 10px;
+    }
+    .navDePage {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        color: gray;
+        padding: 1rm;
+        border-bottom: 1px solid;
+    }
+    .sideBarPage {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        border-bottom: 1px solid;
+        border-right: none;
+        /* display: none; */
+    }
+    .maListeDartiste ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+    .contenuDePage {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .footerDePage {
+        grid-column: 1 / span 5;
+        border-top: 1px solid;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .flex {
+        flex-direction: column;
+    }
+    .mesCards1 {
+        display: flex;
+        flex-direction: row;
+        grid-row: 4 / span 7;
+        margin-bottom: 1;
+    }
+    .mesCards2 {
+        display: flex;
+        flex-direction: row;
+    }
+    .article {
+        display: flex;
+        flex-direction: column;
+    }
+    .itm {
+        margin-bottom: 20px;
+    }
+    .mesCards2 {
+        margin-top: 5px;
+    }
+    article {
+        margin-bottom: 0;
+    }
+    .barDeRecherche {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+/* fin media query poue max 800 */
+
+@media only screen and (max-width: 500px) {
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    .maListeDartiste {
+        display: none;
+    }
+    #toggle:checked+.maListeDartiste {
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+}
+
+
+/* grid-respensive-pour mobile */
+
+@media only screen and (max-width: 500px) {
+    body {
+        margin: auto;
+    }
+    .corpDePage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 50px repeat(10, 150px);
+        grid-gap: 5px;
+    }
+    .navDePage {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        color: wheat;
+        padding: 1rm;
+        border-bottom: 1px solid;
+        /* box-shadow: 0px 5px 10px grey; */
+    }
+    .sideBarPage {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-bottom: 1px solid wheat;
+        /* box-shadow: 0px 5px 10px grey; */
+    }
+    .contenuDePage {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 3 / 10;
+    }
+    .footerDePage {
+        grid-column: 1 / span 2;
+        border-top: 1px solid wheat;
+        /* box-shadow: 0px 5px 10px grey; */
+        grid-row: 12 / 13;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        height: 200%;
+    }
+    .mesCards1 {
+        display: flex;
+        flex-direction: column;
+        grid-row: 4 / span 7;
+    }
+    .mesCards2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .article {
+        display: flex;
+        flex-direction: row;
+    }
+    .itm {
+        height: 150px;
+        width: 150px;
+        border: 1px solid gray;
+    }
+    img {
+        height: 150px;
+        width: 150px;
+    }
+}
