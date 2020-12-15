@@ -102,9 +102,10 @@ article {
 }
 
 .itm {
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 130px;
     border: 1px solid gray;
+    border-radius: 5%;
 }
 
 .mesCards2 {
@@ -112,8 +113,9 @@ article {
 }
 
 img {
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 130px;
+    border-radius: 5%;
 }
 
 .maListeDeReseau img {
@@ -195,7 +197,7 @@ label {
     .corpDePage {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 80px 100px 800px 80px;
+        grid-template-rows: 80px 100px 900px 80px;
         grid-gap: 10px;
     }
     .navDePage {
@@ -249,7 +251,15 @@ label {
         flex-direction: column;
     }
     .itm {
-        margin-bottom: 20px;
+        height: 130px;
+        width: 130px;
+        margin-bottom: 30px;
+        border-radius: 5%;
+    }
+    img {
+        height: 130px;
+        width: 130px;
+        border-radius: 5%;
     }
     .mesCards2 {
         margin-top: 5px;
@@ -259,8 +269,15 @@ label {
     }
     .barDeRecherche {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
+    }
+    .maListeDeReseau {
+        flex-direction: row;
+    }
+    .footerDePage ul {
+        flex-direction: row;
     }
 }
 
@@ -287,6 +304,9 @@ label {
 /* grid-respensive-pour mobile */
 
 @media only screen and (max-width: 500px) {
+    .flex {
+        flex-direction: row;
+    }
     body {
         margin: auto;
     }
@@ -326,7 +346,7 @@ label {
 
 @media only screen and (max-width: 500px) {
     html {
-        height: 200%;
+        height: 220%;
     }
     .mesCards1 {
         display: flex;
@@ -345,9 +365,11 @@ label {
         height: 150px;
         width: 150px;
         border: 1px solid gray;
+        border-radius: 5%;
     }
     img {
         height: 150px;
         width: 150px;
+        border-radius: 5%;
     }
 }
