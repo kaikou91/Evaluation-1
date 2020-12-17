@@ -12,7 +12,7 @@
 
 <body>
     <!-- ma nav bar -->
-    <div class="containerDePage">
+    <div class="headerDePage">
         <nav class="navbar navbar-light bg-light justify-content-between">
             <a class="navbar-brand">My Music</a>
             <form class="form-inline">
@@ -24,36 +24,39 @@
     <!-- mes article -->
     <div class="bannerDePage">
         <!-- <h1>La Biographie du moment</h1> -->
-        <h3>La Biographie du moment</h3>
-        <div class="card" style="width: 18rem;">
+        <article class="part1">
+            <div class="cardEstTitre">
+                <h3>La Biographie du moment</h3>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/eminem.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Ses prochains Concerts</h5>
+                        <p class="card-text">31/12 Le DOME "Marseille"</p>
+                    </div>
+                </div>
+            </div>
 
-            <img class="card-img-top" src="img/eminem.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Ses prochains Concerts</h5>
-                <p class="card-text">31/12 Le DOME "Marseille"</p>
+            <div class="listDeClips">
+                <h4>Ses Dernier clips</h4>
+                <div class="clip">
+                    <img src="img/eminem-concert.jpg" alt="">
+                </div>
+                <div class="clip">
+                    <img src="img/eminem-concert-2.png" alt="">
+                </div>
+                <div class="clip">
+                    <img src="img/eminem_concert-3.jpg" alt="">
+                </div>
+                <div class="clip">
+                    <img src="img/eminem-concert-4.jpg" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="listDeClips">
-            <h4>Ses Dernier clips</h4>
-            <div class="clip">
-                <img src="img/eminem-concert.jpg" alt="">
-            </div>
-            <div class="clip">
-                <img src="img/eminem-concert-2.png" alt="">
-            </div>
-            <div class="clip">
-                <img src="img/eminem_concert-3.jpg" alt="">
-            </div>
-            <div class="clip">
-                <img src="img/eminem-concert-4.jpg" alt="">
-            </div>
-        </div>
-
-        <h4>Mes Artistes</h4>
+        </article>
 
         <div class="mesArtistes">
+            <h4>Mes Artistes</h4>
             <div class="Section1">
+
                 <div class="itm7 itm">
                     <img src="img/soprano.jpg" alt="">
                 </div>
@@ -73,7 +76,7 @@
         </div>
         <!-- partie reseaux sociaux  -->
         <div class="mesReseau">
-            <ul class="maListeDeReseau flex">
+            <ul class="maListeDeReseau">
                 <li>
                     <a href="http://spotify.com" target="blank" id="spotify">
                         <img src="img/spotify.png" alt=""></a>
